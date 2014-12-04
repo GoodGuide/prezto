@@ -9,3 +9,8 @@
 if [[ "$SHLVL" -eq 1 && ! -o LOGIN && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
+
+# Define a ~/.zshenv.local file if you need to set environment variables with API tokens, etc.
+if [[ -s "$HOME/.zshenv.local" ]]; then
+  source "$HOME/.zshenv.local"
+fi
