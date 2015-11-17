@@ -73,3 +73,6 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+
+# Load $HOME/.profile if it exists
+[[ -f "$HOME/.profile" ]] && source "$HOME/.profile"
